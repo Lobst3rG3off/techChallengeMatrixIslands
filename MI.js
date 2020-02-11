@@ -6,10 +6,6 @@ const islandArray = [
 ]
 //part A
 
-
-
-
-
 const arrayReader= function(array)  {
     let oneCount = 0
     for(let i = 0; i< array.length; i++)  //i = the large 4 arrays   {
@@ -49,6 +45,8 @@ const arrayChecker = function (array) {
 
 arrayChecker(islandArray);
 
+
+//part c
 const islandCounter = function (array) {
     let islandMassCount = 0
     for (let i = 0; i < array.length; i++) {
@@ -59,10 +57,18 @@ const islandCounter = function (array) {
                 console.log('island count:', islandCount)
                 // console.log("islandArray is:", islandArray[i][j])
                 // console.log("islandArray1 is:", islandArray[i + 1][j])
-            } else {
+            } else {    
                 console.log('Not an island')
             }
         }
     }
 }
 arrayChecker(islandArray);
+
+//Pseudo code;
+
+// i want the code to define an island as a mass of 1's that are surrounded by zeros. 
+//a corner is is an element that sees two 0s.
+//an edge sees 1 zero.
+//I want the parse to be able to gather together the masses and denote the seperate masses. 
+
