@@ -12,8 +12,8 @@ const islandArray = [
 
 const arrayReader= function(array)  {
     let oneCount = 0
-    for(let i = 0; i< array.length; i++)    {
-        for (j = 0; j < array[i].length; j++) {
+    for(let i = 0; i< array.length; i++)  //i = the large 4 arrays   {
+        for (j = 0; j < array[i].length; j++) //j = the values inside the 4 arrays{
             if (islandArray[i][j] === 1) {
                 oneCount++
                 console.log(oneCount)
