@@ -33,14 +33,34 @@ const arrayChecker = function (array) {
     let islandCount = 0
     for (let i = 0; i < array.length; i++)     {
         for (j = 0; j < array[i].length; j++)  {
-            if (islandArray[i][j] === 1 && islandArray[i][j + 1] === 0 && islandArray[i][j - 1] ===0 && islandArray[i + 1][j] === 0 && islandArray[i - 1][j] === 0) {
+            if (islandArray[i][j] === 1 && islandArray[i][j + 1] === 0 && islandArray[i][j - 1] === 0 && islandArray[i + 1][j] === 0 && islandArray[i - 1][j] === 0) {
 
                 islandCount++
                 console.log('island count:', islandCount)
                 // console.log("islandArray is:", islandArray[i][j])
                 // console.log("islandArray1 is:", islandArray[i + 1][j])
             } else {
-                console.log('Thats a zero')
+                console.log('Not an island')
+            }
+        }
+    }
+}
+
+
+arrayChecker(islandArray);
+
+const islandCounter = function (array) {
+    let islandMassCount = 0
+    for (let i = 0; i < array.length; i++) {
+        for (j = 0; j < array[i].length; j++) {
+            if (islandArray[i][j] === 1 && islandArray[i][j + 1] === 0 && islandArray[i][j - 1] === 0 && islandArray[i + 1][j] === 0 && islandArray[i - 1][j] === 0) {
+
+                islandMassCount++
+                console.log('island count:', islandCount)
+                // console.log("islandArray is:", islandArray[i][j])
+                // console.log("islandArray1 is:", islandArray[i + 1][j])
+            } else {
+                console.log('Not an island')
             }
         }
     }
